@@ -17,12 +17,12 @@ export function Navbar() {
         </li>
         <li>
           <a href="#" className="">
-            Contact
+            FAQ
           </a>
         </li>
         <li>
           <a href="#" className="">
-            FAQ
+            Contact
           </a>
         </li>
       </ul>
