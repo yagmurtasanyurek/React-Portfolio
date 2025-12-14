@@ -31,7 +31,7 @@ export function Hero() {
             {/* Pharagraph div here */}
             <div className="z-50">
               <p className="font-semibold text-xl md:text-2xl text-white text-center uppercase pb-10 ">
-                Lifelong Learner
+                xxx
               </p>
             </div>
           </div>
