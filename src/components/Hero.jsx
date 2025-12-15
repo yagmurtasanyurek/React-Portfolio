@@ -5,7 +5,7 @@ export function Hero() {
     <section className="flex justify-center items-center pt-24 pb-40 ">
       <div className="flex flex-col md:flex-row justify-center gap-10 ">
         {/* first box */}
-        <div className=" bg-pink-900 min-w-2xs sm:min-w-lg md:min-w-2xl relative pb-10">
+        <div className=" bg-pink-900 min-w-2xs sm:min-w-sm md:min-w-xl lg:min-w-2xl relative pb-10">
           {/* Background png */}
           <div
             className="absolute inset-0 top-11 bg-no-repeat bg-cover bg-center z-0"
@@ -37,7 +37,7 @@ export function Hero() {
           </div>
         </div>
         {/* second box */}
-        <div className="inline-flex items-center justify-center bg-cyan-950  md:w-48 z-10 p-10 ">
+        <div className="inline-flex items-center justify-center bg-cyan-950  md:w-40 lg:w-48 z-10 p-10 ">
           <h1 className="text-2xl sm:text-3xl md:text-4xl text-white font-semibold md:-rotate-90 uppercase whitespace-nowrap">
             Front-end developer
           </h1>
