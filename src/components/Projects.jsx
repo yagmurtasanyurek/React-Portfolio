@@ -6,10 +6,9 @@ import ProjectIcon from "../icons/7.svg";
 export function Projects() {
   return (
     <section id="projects" className="relative z-10">
-      <div className="flex items-center gap-4 w-full m-auto py-10 mb-5">
+      <div className="flex items-center gap-4 w-full m-auto py-10 mb-15">
         <span className="border-b w-10 lg:w-25 h-1 rounded-lg"></span>
         <img src={ProjectIcon} alt="" className="w-10 h-10" />
-
         <h1 className="font-bold text-5xl uppercase ">Projects</h1>
       </div>
 
