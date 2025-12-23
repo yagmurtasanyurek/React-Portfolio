@@ -2,7 +2,10 @@ import YagmurPhoto from "../images/Yagmur.jpeg";
 import FlowerPng from "../images/png-flower-silhouette-art-splattered.png";
 export function Hero() {
   return (
-    <section className="flex justify-center items-center pt-24 pb-40 ">
+    <section
+      id="aboutme"
+      className="flex justify-center items-center pt-24 pb-40 "
+    >
       <div className="flex flex-col md:flex-row justify-center gap-10 ">
         {/* first box */}
         <div className=" bg-pink-900 min-w-2xs sm:min-w-sm md:min-w-xl lg:min-w-2xl relative pb-10">
