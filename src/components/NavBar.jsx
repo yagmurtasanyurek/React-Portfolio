@@ -6,22 +6,22 @@ export function Navbar() {
       </a>
       <ul className="flex justify-center items-center h-10 gap-[5vw] md:gap-[7vw] font-bold">
         <li>
-          <a href="#" className="">
+          <a href="aboutme" className="">
             About me
           </a>
         </li>
         <li>
-          <a href="#" className="">
+          <a href="projects" className="">
             Projects
           </a>
         </li>
         <li>
-          <a href="#" className="">
+          <a href="faq" className="">
             FAQ
           </a>
         </li>
         <li>
-          <a href="#" className="">
+          <a href="contact" className="">
             Contact
           </a>
         </li>
