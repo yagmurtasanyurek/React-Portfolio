@@ -1,9 +1,9 @@
 import navIcon from "../icons/16.svg";
 export function Navbar() {
   return (
-    <nav className="flex justify-between items-center h-20 border-b-1 text-lg max-[475px]:text-sm md:text-2xl lg:text-3xl mx-4 md:mx-10 uppercase  ">
+    <nav className="flex justify-between items-center h-20 border-b text-lg max-[475px]:text-sm md:text-2xl lg:text-3xl mx-4 md:mx-10 uppercase  ">
       <a className="font-bold " href="#">
-        Logo
+        <img src={navIcon} alt="" className="h-8 w-8 lg:h-10 lg:w-10" />
       </a>
       <ul className="flex justify-center items-center h-10 gap-[7vw] font-bold">
         <li>
