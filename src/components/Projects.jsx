@@ -5,15 +5,16 @@ import Omnifood from "../images/omnifood.png";
 import ProjectIcon from "../icons/7.svg";
 export function Projects() {
   return (
-    <section id="projects" className="relative z-10">
-      <div className="flex items-center gap-4 w-full m-auto py-10 mb-15">
-        <span className="border-b w-10 lg:w-25 h-1 rounded-lg"></span>
+    <section id="projects" className="relative z-10 mt-25">
+      <div className="ml-8 md:ml-10 lg:ml-35 flex items-center gap-4 m-auto mb-5 bg-cyan-950 py-7 rounded-l-xl pl-5 md:pl-10 lg:pl-20">
         <img src={ProjectIcon} alt="" className="w-10 h-10" />
-        <h1 className="font-bold text-5xl uppercase ">Projects</h1>
+        <h1 className="font-bold text-4xl md:text-5xl uppercase  rounded-lg text-white ">
+          Projects
+        </h1>
       </div>
 
-      <div className="bg-cyan-950 w-full lg:w-5/6 max-w-7xl m-auto py-15 md:py-20">
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 ">
+      <div className=" w-full lg:w-5/6 max-w-7xl m-auto py-10 md:py-15">
+        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm">
           <a
             target="_blank"
             href="https://weatherforecastbyyagmur.netlify.app/"
@@ -27,12 +28,13 @@ export function Projects() {
              duration-500 hover:-translate-2 
              shadow-[20px_20px_0px_#831843] 
              hover:shadow-[26px_26px_0px_#831843]
+             rounded-lg overflow-hidden
             "
           >
             <div className="w-full md:w-60 ">
               <img
                 src={Weather}
-                className="w-full h-60 md:h-40 object-cover  md:p-0"
+                className="w-full h-60 md:h-40 object-cover  md:p-0 "
               />
             </div>
             <div className="flex-1 max-w-xl self-center p-10 md:p-0 md:pb-0 ">
@@ -48,23 +50,23 @@ export function Projects() {
                 interface.
               </p>
               <div className="flex flex-wrap justify-start gap-2">
-                <span className="bg-cyan-950 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
+                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
                   React
                 </span>
-                <span className="bg-cyan-950 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
+                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
                   JavaScript
                 </span>
-                <span className="bg-cyan-950 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
+                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
                   RTK Query
                 </span>
-                <span className="bg-cyan-950 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
+                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
                   Tailwind css
                 </span>
               </div>
             </div>
           </a>
         </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 ">
+        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm ">
           <a
             target="_blank"
             href="https://somuchtodo.netlify.app/"
@@ -75,9 +77,10 @@ export function Projects() {
              md:py-10 md:px-10 
              bg-slate-50 
              transform transition-all
-             duration-500 hover:-translate-2 
-             shadow-[20px_20px_0px_#831843] 
-             hover:shadow-[26px_26px_0px_#831843]"
+             duration-500 hover:translate-2 
+             shadow-[-20px_20px_0px_#053345] 
+             hover:shadow-[-26px_26px_0px_#053345]
+             rounded-lg overflow-hidden"
           >
             <div className="w-full md:w-60 ">
               <img
@@ -109,7 +112,7 @@ export function Projects() {
             </div>
           </a>
         </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 ">
+        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm">
           <a
             target="_blank"
             href="https://omnifood-yagmur.netlify.app/"
@@ -122,7 +125,8 @@ export function Projects() {
              transform transition-all
              duration-500 hover:-translate-2 
              shadow-[20px_20px_0px_#831843] 
-             hover:shadow-[26px_26px_0px_#831843]"
+             hover:shadow-[26px_26px_0px_#831843]
+             rounded-lg overflow-hidden"
           >
             <div className="w-full md:w-60">
               <img
@@ -142,17 +146,17 @@ export function Projects() {
                 hierarchy, and an engaging user experience.
               </p>
               <div className="flex flex-wrap justify-start gap-2">
-                <span className="bg-cyan-950 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
+                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
                   CSS
                 </span>
-                <span className="bg-cyan-950 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
+                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
                   Responsive
                 </span>
               </div>
             </div>
           </a>
         </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center  px-20 md:px-10 lg:px-20 ">
+        <div className="w-full max-w-6xl mx-auto flex justify-center  px-20 md:px-10 lg:px-20 rounded-sm">
           <a
             target="_blank"
             href="https://forkify-yagmur.netlify.app/#664c8f193e7aa067e94e868f"
@@ -163,9 +167,10 @@ export function Projects() {
              md:py-10 md:px-10 
              bg-slate-50 
              transform transition-all
-             duration-500 hover:-translate-2 
-             shadow-[20px_20px_0px_#831843] 
-             hover:shadow-[26px_26px_0px_#831843]"
+             duration-500 hover:translate-2 
+             shadow-[-20px_20px_0px_#053345] 
+             hover:shadow-[-26px_26px_0px_#053345]
+             rounded-lg  overflow-hidden"
           >
             <div className="w-full md:w-60">
               <img
