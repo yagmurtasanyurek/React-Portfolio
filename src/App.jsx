@@ -2,6 +2,7 @@ import { Navbar } from "./components/NavBar";
 import { Hero } from "./components/Hero";
 import { Projects } from "./components/Projects";
 import { Footer } from "./components/Footer";
+import { Contact } from "./components/Contact";
 
 export function App() {
   return (
@@ -17,6 +18,7 @@ export function App() {
           <Hero />
         </main>
         <Projects />
+        <Contact />
         <Footer />
       </div>
     </div>
