@@ -21,7 +21,7 @@ export function Contact() {
         >
           <form>
             <div className="flex flex-col md:flex-row md:gap-10 mb-5">
-              <div className=" w-full flex flex-col w-1/2 mb-5 md:mb-0">
+              <div className=" w-full flex flex-col md:w-1/2 mb-5 md:mb-0">
                 <label className="font-bold uppercase pb-2">Full Name</label>
                 <input
                   required
@@ -30,7 +30,7 @@ export function Contact() {
                   className="rounded-lg py-1 px-2 bg-[#e0e0de]"
                 />
               </div>
-              <div className=" w-full  flex flex-col w-1/2">
+              <div className=" w-full flex flex-col md:w-1/2">
                 <label className="font-bold uppercase pb-2">
                   Email address
                 </label>
