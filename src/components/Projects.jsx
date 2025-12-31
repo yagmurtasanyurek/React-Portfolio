@@ -5,15 +5,18 @@ import Omnifood from "../images/omnifood.png";
 import ProjectIcon from "../icons/7.svg";
 export function Projects() {
   return (
-    <section id="projects" className="relative z-10 mt-25">
-      <div className="ml-8 md:ml-10 lg:ml-35 flex items-center gap-4 m-auto mb-5 bg-cyan-950 py-7 rounded-l-xl pl-5 md:pl-10 lg:pl-20">
+    <section id="projects" className="relative z-10 pt-25 pb-40">
+      <div className="ml-8 md:ml-10 lg:ml-35 flex items-center gap-4 m-auto mb-10 md:mb-20 bg-cyan-950 py-7 rounded-l-xl pl-5 md:pl-10 lg:pl-20">
         <img src={ProjectIcon} alt="" className="w-10 h-10" />
         <h1 className="font-bold text-4xl md:text-5xl uppercase  rounded-lg text-white ">
           Projects
         </h1>
       </div>
 
-      <div className=" w-full lg:w-5/6 max-w-7xl m-auto py-10 md:py-15">
+      <div
+        className=" w-full lg:w-5/6 max-w-7xl m-auto 
+      "
+      >
         <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm">
           <a
             target="_blank"

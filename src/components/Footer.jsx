@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="w-full flex flex-col justify-center items-center  relative z-10 mt-20 border-t py-15">
+    <footer className="w-full flex flex-col justify-center items-center  relative z-10 pt-20 border-t py-15">
       <div className="flex justify-center w-3/4 gap-10 pb-3">
         <a
           className="transform transition-all

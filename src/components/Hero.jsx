@@ -4,7 +4,7 @@ export function Hero() {
   return (
     <section
       id="aboutme"
-      className="flex justify-center items-center pt-24 pb-40 "
+      className=" flex justify-center items-center pt-24 pb-40 "
     >
       <div className="flex flex-col md:flex-row justify-center gap-10 ">
         {/* first box */}
