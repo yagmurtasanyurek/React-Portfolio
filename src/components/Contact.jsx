@@ -91,14 +91,23 @@ export function Contact() {
                 className=" rounded-lg py-1 px-2 bg-[#e0e0de]"
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="px-5 py-1
-            rounded-2xl
-           text-white bg-black"
-            >
-              Send
-            </button>
+            <div className="flex justify-end">
+              <button
+                type="submit"
+                className="px-5 py-1 mt-1
+                rounded-2xl cursor-pointer
+                border border-black
+                text-white bg-black
+                transition-all duration-200
+               hover:text-black hover:bg-[#e0e0de]
+               hover:shadow-[0.25rem_0.25rem_#000]
+               hover:-translate-x-1 hover:-translate-y-1
+               active:translate-0
+              active:shadow-none "
+              >
+                Send
+              </button>
+            </div>
           </form>
         </div>
       </div>
