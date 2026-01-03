@@ -16,11 +16,11 @@ export function Navbar() {
             Projects
           </a>
         </li>
-        <li>
+        {/*  <li>
           <a href="#faq" className="">
             FAQ
           </a>
-        </li>
+        </li> */}
         <li>
           <a href="#contact" className="">
             Contact
