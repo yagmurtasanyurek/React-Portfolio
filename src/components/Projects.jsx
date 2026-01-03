@@ -17,7 +17,7 @@ export function Projects() {
         className=" w-full lg:w-5/6 max-w-7xl m-auto 
       "
       >
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm ">
+        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-8 md:px-10 lg:px-15 rounded-sm ">
           <a
             target="_blank"
             href="https://weatherforecastbyyagmur.netlify.app/"
@@ -70,7 +70,7 @@ export function Projects() {
             </div>
           </a>
         </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm  ">
+        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-8 md:px-10 lg:px-15 rounded-sm  ">
           <a
             target="_blank"
             href="https://somuchtodo.netlify.app/"
@@ -117,7 +117,7 @@ export function Projects() {
             </div>
           </a>
         </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm ">
+        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-8 md:px-10 lg:px-15 rounded-sm ">
           <a
             target="_blank"
             href="https://omnifood-yagmur.netlify.app/"
@@ -162,7 +162,7 @@ export function Projects() {
             </div>
           </a>
         </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center  px-20 md:px-10 lg:px-20 rounded-sm  ">
+        <div className="w-full max-w-6xl mx-auto flex justify-center  px-8 md:px-10 lg:px-15 rounded-sm  ">
           <a
             target="_blank"
             href="https://forkify-yagmur.netlify.app/#664c8f193e7aa067e94e868f"
