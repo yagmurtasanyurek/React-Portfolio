@@ -17,21 +17,22 @@ export function Projects() {
         className=" w-full lg:w-5/6 max-w-7xl m-auto 
       "
       >
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm">
+        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm ">
           <a
             target="_blank"
             href="https://weatherforecastbyyagmur.netlify.app/"
             className="flex flex-col md:flex-row
-           md:gap-7
-           w-full max-w-4xl
-            md:p-4
-            md:py-10 md:px-10 
+             md:gap-7
+             w-full max-w-4xl
+             md:p-4
+             md:py-10 md:px-10 
              bg-slate-50 
             transform transition-all
-             duration-500 hover:-translate-2 
+             duration-500 
+             hover:-translate-x-1 hover:-translate-y-1
              shadow-[20px_20px_0px_#831843] 
-             hover:shadow-[26px_26px_0px_#831843]
-             rounded-lg overflow-hidden
+             hover:shadow-[24px_24px_0px_#831843]
+             rounded-lg overflow-hidden 
             "
           >
             <div className="w-full md:w-60 ">
@@ -69,7 +70,7 @@ export function Projects() {
             </div>
           </a>
         </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm ">
+        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm  ">
           <a
             target="_blank"
             href="https://somuchtodo.netlify.app/"
@@ -80,9 +81,10 @@ export function Projects() {
              md:py-10 md:px-10 
              bg-slate-50 
              transform transition-all
-             duration-500 hover:translate-2 
-             shadow-[-20px_20px_0px_#053345] 
-             hover:shadow-[-26px_26px_0px_#053345]
+             duration-500 
+              hover:-translate-x-1 hover:-translate-y-1
+             shadow-[20px_20px_0px_#053345] 
+             hover:shadow-[24px_24px_0px_#053345]
              rounded-lg overflow-hidden"
           >
             <div className="w-full md:w-60 ">
@@ -115,7 +117,7 @@ export function Projects() {
             </div>
           </a>
         </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm">
+        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-20 md:px-10 lg:px-20 rounded-sm ">
           <a
             target="_blank"
             href="https://omnifood-yagmur.netlify.app/"
@@ -126,9 +128,10 @@ export function Projects() {
              md:py-10 md:px-10 
              bg-slate-50 
              transform transition-all
-             duration-500 hover:-translate-2 
+             duration-500 
+             hover:-translate-x-1 hover:-translate-y-1  
              shadow-[20px_20px_0px_#831843] 
-             hover:shadow-[26px_26px_0px_#831843]
+             hover:shadow-[24px_24px_0px_#831843]
              rounded-lg overflow-hidden"
           >
             <div className="w-full md:w-60">
@@ -159,7 +162,7 @@ export function Projects() {
             </div>
           </a>
         </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center  px-20 md:px-10 lg:px-20 rounded-sm">
+        <div className="w-full max-w-6xl mx-auto flex justify-center  px-20 md:px-10 lg:px-20 rounded-sm  ">
           <a
             target="_blank"
             href="https://forkify-yagmur.netlify.app/#664c8f193e7aa067e94e868f"
@@ -170,10 +173,11 @@ export function Projects() {
              md:py-10 md:px-10 
              bg-slate-50 
              transform transition-all
-             duration-500 hover:translate-2 
-             shadow-[-20px_20px_0px_#053345] 
-             hover:shadow-[-26px_26px_0px_#053345]
-             rounded-lg  overflow-hidden"
+             duration-500 
+              hover:-translate-x-1 hover:-translate-y-1
+             shadow-[20px_20px_0px_#053345] 
+             hover:shadow-[24px_24px_0px_#053345]
+             rounded-lg overflow-hidden"
           >
             <div className="w-full md:w-60">
               <img
