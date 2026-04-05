@@ -83,7 +83,7 @@ export function Hero() {
         </p>
 
         <a
-          href="/Yagmur_Tasanyurek_CV.pdf"
+          href="/Yagmur_Tasanyurek_Resume.pdf"
           download
           className="inline-flex items-center gap-2 mt-6 px-6 py-2.5
             bg-cyan-950 text-white font-bold uppercase tracking-wide rounded-lg
