@@ -1,38 +1,46 @@
+import { motion } from "framer-motion";
+import { HiOutlineMail } from "react-icons/hi";
+import { FiLinkedin, FiGithub } from "react-icons/fi";
+
+const links = [
+  {
+    href: "mailto:yagmurtasanyurek@gmail.com",
+    icon: HiOutlineMail,
+    label: "Email",
+  },
+  {
+    href: "https://www.linkedin.com/in/ya%C4%9Fmur-ta%C5%9Fany%C3%BCrek-5bb90a24b/",
+    icon: FiLinkedin,
+    label: "LinkedIn",
+  },
+  {
+    href: "https://github.com/yagmurtasanyurek",
+    icon: FiGithub,
+    label: "GitHub",
+  },
+];
+
 export function Footer() {
   return (
-    <footer className="w-full flex flex-col justify-center items-center  relative z-10 pt-20 border-t py-15">
-      <div className="flex justify-center w-3/4 gap-10 pb-3">
-        <a
-          className="transform transition-all
-             duration-600 
-             hover:text-cyan-500 "
-          href="mailto:yagmurtasanyurek@gmail.com"
-          target="_blank"
-        >
-          <ion-icon size="large" name="mail-outline"></ion-icon>
-        </a>
-        <a
-          className="transform transition-all
-             duration-500 
-             hover:text-cyan-500 "
-          href="https://www.linkedin.com/in/ya%C4%9Fmur-ta%C5%9Fany%C3%BCrek-5bb90a24b/"
-          target="_blank"
-        >
-          <ion-icon size="large" name="logo-linkedin"></ion-icon>
-        </a>
-        <a
-          className="transform transition-all
-             duration-500 
-             hover:text-cyan-500 "
-          href="https://github.com/yagmurtasanyurek"
-          target="_blank"
-        >
-          <ion-icon size="large" name="logo-github"></ion-icon>
-        </a>
+    <footer className="w-full flex flex-col justify-center items-center relative z-10 pt-16 border-t py-12">
+      <div className="flex justify-center gap-8 pb-4">
+        {links.map(({ href, icon: Icon, label }) => (
+          <motion.a
+            key={href}
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={label}
+            whileHover={{ y: -3 }}
+            className="text-3xl transition-colors duration-300 hover:text-pink-900"
+          >
+            <Icon />
+          </motion.a>
+        ))}
       </div>
-      <div>
-        <p className="font-semibold">&copy; Yağmur Taşanyürek 2025</p>
-      </div>
+      <p className="font-semibold text-sm text-gray-600">
+        &copy; {new Date().getFullYear()} Yağmur Taşanyürek
+      </p>
     </footer>
   );
 }

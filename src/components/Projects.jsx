@@ -1,209 +1,148 @@
-import Todo from "../images/to-do.png";
-import Weather from "../images/weatherforecast.png";
-import Forkify from "../images/forkifyy.png";
-import Omnifood from "../images/omnifood.png";
+import { motion } from "framer-motion";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
 import ProjectIcon from "../icons/7.svg";
+import { projects } from "../data/projects";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.55, delay: i * 0.12, ease: "easeOut" },
+  }),
+};
+
+function ProjectCard({ project, index }) {
+  return (
+    <motion.div
+      variants={fadeUp}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      custom={index}
+      className="w-full max-w-6xl mx-auto flex justify-center pb-12 px-6 md:px-10 lg:px-14"
+    >
+      <div
+        className="flex flex-col md:flex-row md:gap-7 w-full max-w-4xl
+          md:p-10 bg-slate-50 rounded-lg overflow-hidden
+          transition-all duration-300
+          hover:-translate-x-1 hover:-translate-y-1"
+        style={{
+          boxShadow: `16px 16px 0px ${project.accentColor}`,
+        }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.boxShadow = `22px 22px 0px ${project.accentColor}`)
+        }
+        onMouseLeave={(e) =>
+          (e.currentTarget.style.boxShadow = `16px 16px 0px ${project.accentColor}`)
+        }
+      >
+        {/* Image */}
+        <div className="relative w-full md:w-60 shrink-0 group overflow-hidden">
+          <img
+            src={project.image}
+            alt={`${project.title} screenshot`}
+            className="w-full h-56 md:h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            loading="lazy"
+          />
+          {/* Hover overlay */}
+          <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-5">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${project.title} live demo`}
+              className="text-white text-3xl hover:text-amber-200 transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <FiExternalLink />
+            </a>
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`${project.title} GitHub repository`}
+              className="text-white text-3xl hover:text-amber-200 transition-colors"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <FiGithub />
+            </a>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="flex-1 self-center p-8 md:p-0">
+          <h2 className="uppercase font-bold text-2xl pb-2">{project.title}</h2>
+          <p className="pb-5 font-medium text-gray-700 text-balance leading-relaxed">
+            {project.description}
+          </p>
+
+          {/* Tags */}
+          <div className="flex flex-wrap gap-2 mb-5">
+            {project.tags.map((tag) => (
+              <span
+                key={tag}
+                className="px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-xs"
+                style={{ backgroundColor: project.accentColor }}
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          {/* Buttons */}
+          <div className="flex gap-3 flex-wrap">
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-1.5 text-sm font-bold uppercase
+                text-white rounded-lg transition-all duration-200
+                hover:-translate-y-0.5 hover:opacity-90"
+              style={{ backgroundColor: project.accentColor }}
+            >
+              <FiExternalLink />
+              Live Demo
+            </a>
+            <a
+              href={project.githubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-4 py-1.5 text-sm font-bold uppercase
+                border-2 rounded-lg transition-all duration-200
+                hover:-translate-y-0.5"
+              style={{ borderColor: project.accentColor, color: project.accentColor }}
+            >
+              <FiGithub />
+              GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
 export function Projects() {
   return (
-    <section id="projects" className="relative z-10  pb-40">
-      <div className="ml-8 md:ml-10 lg:ml-35 flex items-center gap-4 m-auto mb-10 md:mb-20 bg-cyan-950 py-7 rounded-l-xl pl-5 md:pl-10 lg:pl-20">
+    <section id="projects" className="relative z-10 pb-24">
+      <motion.div
+        initial={{ opacity: 0, x: -40 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        className="ml-8 md:ml-10 lg:ml-35 flex items-center gap-4 mb-12 md:mb-20 bg-cyan-950 py-7 rounded-l-xl pl-5 md:pl-10 lg:pl-20"
+      >
         <img src={ProjectIcon} alt="" className="w-10 h-10" />
-        <h1 className="font-bold text-4xl md:text-5xl uppercase  rounded-lg text-white ">
+        <h1 className="font-bold text-4xl md:text-5xl uppercase text-white">
           Projects
         </h1>
-      </div>
+      </motion.div>
 
-      <div
-        className=" w-full lg:w-5/6 max-w-7xl m-auto 
-      "
-      >
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-8 md:px-10 lg:px-15 rounded-sm ">
-          <a
-            target="_blank"
-            href="https://weatherforecastbyyagmur.netlify.app/"
-            className="flex flex-col md:flex-row
-             md:gap-7
-             w-full max-w-4xl
-             md:p-4
-             md:py-10 md:px-10 
-             bg-slate-50 
-            transform transition-all
-             duration-500 
-             hover:-translate-x-1 hover:-translate-y-1
-             shadow-[20px_20px_0px_#831843] 
-             hover:shadow-[24px_24px_0px_#831843]
-             rounded-lg overflow-hidden 
-            "
-          >
-            <div className="w-full md:w-60 ">
-              <img
-                src={Weather}
-                className="w-full h-60 md:h-40 object-cover  md:p-0 "
-              />
-            </div>
-            <div className="flex-1 max-w-xl self-center p-10 md:p-0 md:pb-0 ">
-              <h1 className="uppercase font-bold text-2xl pb-2  ">
-                Weather Forecast
-              </h1>
-
-              <p className=" pb-5 font-medium text-balance ">
-                A weather forecast application that provides hourly updates and
-                a 5-day outlook. It displays essential details such as sunrise
-                and sunset times, wind, rain conditions, and daily minimum and
-                maximum temperatures, all presented in a clean and user-friendly
-                interface.
-              </p>
-              <div className="flex flex-wrap justify-start gap-2">
-                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
-                  React
-                </span>
-                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
-                  JavaScript
-                </span>
-                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
-                  RTK Query
-                </span>
-                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
-                  Tailwind css
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-8 md:px-10 lg:px-15 rounded-sm  ">
-          <a
-            target="_blank"
-            href="https://somuchtodo.netlify.app/"
-            className="flex flex-col md:flex-row
-            md:gap-7
-             w-full max-w-4xl
-              md:p-10
-             md:py-10 md:px-10 
-             bg-slate-50 
-             transform transition-all
-             duration-500 
-              hover:-translate-x-1 hover:-translate-y-1
-             shadow-[20px_20px_0px_#053345] 
-             hover:shadow-[24px_24px_0px_#053345]
-             rounded-lg overflow-hidden"
-          >
-            <div className="w-full md:w-60 ">
-              <img
-                src={Todo}
-                className="w-full h-60 md:h-40 object-cover md:p-0"
-              />
-            </div>
-            <div className="flex-1 max-w-xl self-center p-10 md:p-0 md:pb-0 ">
-              <h1 className="uppercase font-bold text-2xl pb-2 ">
-                To-Do List App
-              </h1>
-              <p className="pb-5 font-medium">
-                A task management application that allows users to add, delete,
-                and mark tasks as completed. The app is designed to keep task
-                tracking simple and efficient, with a clear interface that makes
-                it easy to manage daily to-dos and stay organized.
-              </p>
-              <div className="flex flex-wrap justify-start gap-2">
-                <span className="bg-cyan-950 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
-                  React
-                </span>
-                <span className="bg-cyan-950 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
-                  JavaScript
-                </span>
-                <span className="bg-cyan-950 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
-                  Tailwind css
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center pb-15 px-8 md:px-10 lg:px-15 rounded-sm ">
-          <a
-            target="_blank"
-            href="https://omnifood-yagmur.netlify.app/"
-            className="flex flex-col md:flex-row
-           md:gap-7
-             w-full max-w-4xl
-              md:p-10
-             md:py-10 md:px-10 
-             bg-slate-50 
-             transform transition-all
-             duration-500 
-             hover:-translate-x-1 hover:-translate-y-1  
-             shadow-[20px_20px_0px_#831843] 
-             hover:shadow-[24px_24px_0px_#831843]
-             rounded-lg overflow-hidden"
-          >
-            <div className="w-full md:w-60">
-              <img
-                src={Omnifood}
-                className="w-full h-60 md:h-40 object-cover md:p-0"
-              />
-            </div>
-            <div className="flex-1 max-w-xl self-center p-10 md:p-0 md:pb-0 ">
-              <h1 className="uppercase font-bold text-2xl pb-2 ">
-                Omnifood Website
-              </h1>
-              <p className="pb-5 font-medium text-balance">
-                A modern, UI-focused company website for a food subscription
-                service. It includes clear call-to-action sections, a “how it
-                works” flow, example meals, a small gallery, pricing plans, and
-                testimonials, with an emphasis on clean layouts, visual
-                hierarchy, and an engaging user experience.
-              </p>
-              <div className="flex flex-wrap justify-start gap-2">
-                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
-                  CSS
-                </span>
-                <span className="bg-pink-900 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
-                  Responsive
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
-        <div className="w-full max-w-6xl mx-auto flex justify-center  px-8 md:px-10 lg:px-15 rounded-sm  ">
-          <a
-            target="_blank"
-            href="https://forkify-yagmur.netlify.app/#664c8f193e7aa067e94e868f"
-            className="flex flex-col md:flex-row
-             md:gap-7
-             w-full max-w-4xl
-              md:p-10
-             md:py-10 md:px-10 
-             bg-slate-50 
-             transform transition-all
-             duration-500 
-              hover:-translate-x-1 hover:-translate-y-1
-             shadow-[20px_20px_0px_#053345] 
-             hover:shadow-[24px_24px_0px_#053345]
-             rounded-lg overflow-hidden"
-          >
-            <div className="w-full md:w-60">
-              <img
-                src={Forkify}
-                className="w-full h-60 md:h-40 object-cover md:p-0"
-              />
-            </div>
-            <div className="flex-1 max-w-xl self-center p-10 md:p-0 md:pb-0 ">
-              <h1 className="uppercase font-bold text-2xl pb-2 ">
-                Forkify Recipe Project
-              </h1>
-              <p className="pb-5 font-medium text-balance ">
-                A recipe application that allows users to search for recipes,
-                adjust serving sizes, and automatically recalculate ingredient
-                quantities. Users can save favorite recipes for later and add
-                their own recipes, with a focus on clear UI, practical
-                functionality, and smooth interactions for everyday cooking use
-              </p>
-              <div className="flex flex-wrapjustify-start gap-2">
-                <span className="bg-cyan-950 px-3 py-1 rounded-lg text-amber-50 font-semibold uppercase text-sm">
-                  JavaScript
-                </span>
-              </div>
-            </div>
-          </a>
-        </div>
+      <div className="w-full lg:w-5/6 max-w-7xl m-auto">
+        {projects.map((project, i) => (
+          <ProjectCard key={project.id} project={project} index={i} />
+        ))}
       </div>
     </section>
   );
